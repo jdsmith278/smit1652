@@ -86,6 +86,8 @@ namespace TheAionProject
             DisplayMenuBox(menu);
             DisplayInputBox();
             DisplayStatusBox();
+
+
         }
 
         /// <summary>
@@ -94,6 +96,7 @@ namespace TheAionProject
         public void GetContinueKey()
         {
             Console.ReadKey();
+
         }
 
         /// <summary>
@@ -558,7 +561,11 @@ namespace TheAionProject
 
             
             traveler.Name = GetString();
+            var player = new System.Media.SoundPlayer();
+            player.SoundLocation = "Dungeon1.wav";
+            player.PlayLooping();
 
+         
             //
             // get traveler's age
             //

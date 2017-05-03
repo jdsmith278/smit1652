@@ -153,6 +153,7 @@ namespace TheAionProject
                         break;
 
                     case ExileAction.Inventory:
+                       
                         _gameConsoleView.DisplayInventory();
                         break;
 
