@@ -24,6 +24,7 @@ namespace TheAionProject
         //
         Exile _gameTraveler;
         Atlas _gameWorld; // game universe
+       
 
         ViewStatus _viewStatus;
 
@@ -38,10 +39,11 @@ namespace TheAionProject
         /// <summary>
         /// default constructor to create the console view objects
         /// </summary>
-        public ConsoleView(Exile gameTraveler, Atlas gameWorld) // needed to give access to Universe "PARAMETER"
+        public ConsoleView(Exile gameTraveler, Atlas gameWorld ) // needed to give access to Universe "PARAMETER"
         {
             _gameTraveler = gameTraveler;
             _gameWorld = gameWorld; // game universe
+            
 
 
             _viewStatus = ViewStatus.PlayingGame; // CHANGED FROM ExileInitialization to get Stats to show up!
@@ -214,6 +216,7 @@ namespace TheAionProject
 
             return true;
         }
+        
 
         public void DisplayLocationsVistied()
         {
@@ -270,12 +273,22 @@ namespace TheAionProject
 
             Console.SetCursorPosition(0, 10);
             string tabSpace = new String(' ', 35);
-            Console.WriteLine(tabSpace + @"                    _____     __   .__                   ");
-            Console.WriteLine(tabSpace + @"                   /  _  \  _/  |_ |  |  _____     ______");
-            Console.WriteLine(tabSpace + @"                  /  /_\  \ \   __\|  |  \__  \   /  ___/");
-            Console.WriteLine(tabSpace + @"                 /    |    \ |  |  |  |__ / __ \_ \___ \ ");
-            Console.WriteLine(tabSpace + @"                 \____|__  / |__|  |____/(____  //____  >");
-            Console.WriteLine(tabSpace + @"                         \/                   \/      \/ ");
+            Console.WriteLine(tabSpace + @"               AAA                tttt          lllllll                                   ");
+            Console.WriteLine(tabSpace + @"              A:::A            ttt:::t          l:::::l                                   ");
+            Console.WriteLine(tabSpace + @"             A:::::A           t:::::t          l:::::l                                   ");
+            Console.WriteLine(tabSpace + @"            A:::::::A          t:::::t          l:::::l                                   ");
+            Console.WriteLine(tabSpace + @"           A:::::::::A   ttttttt:::::ttttttt     l::::l   aaaaaaaaaaaaa      ssssssssss   ");
+            Console.WriteLine(tabSpace + @"          A:::::A:::::A  t:::::::::::::::::t     l::::l   a::::::::::::a   ss::::::::::s  ");
+            Console.WriteLine(tabSpace + @"         A:::::A A:::::A t:::::::::::::::::t     l::::l   aaaaaaaaa:::::ass:::::::::::::s ");
+            Console.WriteLine(tabSpace + @"        A:::::A   A:::::Atttttt:::::::tttttt     l::::l            a::::as::::::ssss:::::s");
+            Console.WriteLine(tabSpace + @"       A:::::A     A:::::A     t:::::t           l::::l     aaaaaaa:::::a s:::::s  ssssss ");
+            Console.WriteLine(tabSpace + @"      A:::::AAAAAAAAA:::::A    t:::::t           l::::l   aa::::::::::::a   s::::::s      ");
+            Console.WriteLine(tabSpace + @"     A:::::::::::::::::::::A   t:::::t           l::::l  a::::aaaa::::::a      s::::::s   ");
+            Console.WriteLine(tabSpace + @"    A:::::AAAAAAAAAAAAA:::::A  t:::::t    tttttt l::::l a::::a    a:::::assssss   s:::::s  ");
+            Console.WriteLine(tabSpace + @"   A:::::A               A:::::Att::::::::::::::tl::::::la:::::aaaa::::::as::::::::::::::s ");
+            Console.WriteLine(tabSpace + @"  A:::::A                 A:::::A tt:::::::::::ttl::::::l a::::::::::aa:::as:::::::::::ss  ");
+            Console.WriteLine(tabSpace + @" AAAAAAA                   AAAAAAA  ttttttttttt  llllllll  aaaaaaaaaa  aaaa sssssssssss    ");
+            
             Console.WriteLine();
             Console.WriteLine(tabSpace + @"                         C# Major");
             //Console.WriteLine(tabSpace + @" _____ _              ___  _               ______          _           _   ");
@@ -287,7 +300,7 @@ namespace TheAionProject
             //Console.WriteLine(tabSpace + @"                                                         _/ |              ");
             //Console.WriteLine(tabSpace + @"                                                        |__/             ");
 
-            Console.SetCursorPosition(80, 25);
+            Console.SetCursorPosition(80, 29);
             Console.Write("Press any key to continue or Esc to exit.");
             keyPressed = Console.ReadKey();
             if (keyPressed.Key == ConsoleKey.Escape)
@@ -541,10 +554,10 @@ namespace TheAionProject
             // get traveler's name
             //
             DisplayGamePlayScreen("Character Parameters - Name", Text.InitializeMissionGetTravelerName(), ActionMenu.MissionIntro, "");
-            int gameTravelerCitizenID;
+            DisplayInputBoxPrompt("Enter your name: ");
 
-            GetInteger($"Enter your Citizen ID: ", 10000, 99999, out gameTravelerCitizenID);
-            traveler.Name = gameTravelerCitizenID;
+            
+            traveler.Name = GetString();
 
             //
             // get traveler's age

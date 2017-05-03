@@ -10,8 +10,10 @@ namespace TheAionProject
     {
         public override int Id { get; set; }
         public override string Name { get; set; }
+        public override string _npcName { get; set; }
         public override string Description { get; set; }
         public override int AtlasLocationId { get; set; }
+        public override int Power {get; set;}
         public TravelerObjectType Type { get; set; }
         public bool CanInventory { get; set; }
         public bool IsConsumable { get; set; }

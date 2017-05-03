@@ -29,11 +29,25 @@ namespace TheAionProject
             new TravelerObject
             {
                 Id = 2,
-                Name = "knife",
+                Name = "Steel Headstock",
                 AtlasLocationId = 3,
                 Description = "a standard knife.",
-                Type = TravelerObjectType.Treasure,
+                Type = TravelerObjectType.Weapon,
                 Value = 15,
+                Power = 15,
+                CanInventory = true,
+                IsConsumable = false,
+                IsVisible = true
+            },
+            new TravelerObject
+            {
+                Id = 2,
+                Name = "Oak Shaft",
+                AtlasLocationId = 3,
+                Description = "a standard knife.",
+                Type = TravelerObjectType.Weapon,
+                Value = 15,
+                Power = 10,
                 CanInventory = true,
                 IsConsumable = true,
                 IsVisible = true
@@ -49,7 +63,9 @@ namespace TheAionProject
                 Value = 45,
                 CanInventory = false,
                 IsConsumable = true,
-                IsVisible = true
+                IsVisible = true,
+  
+                
             },
 
             new TravelerObject

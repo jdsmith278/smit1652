@@ -94,26 +94,6 @@ namespace TheAionProject
             }
         }
 
-
-        /// <summary>
-        /// determine if a location is accessible to the player
-        /// </summary>
-        /// <param name="spaceTimeLocationId"></param>          /// COMMENTED OUT BECAUSE DOUBLE METHOD
-        /// <returns>accessible</returns>
-        /// 
-        //////public bool IsAccessibleLocation(int spaceTimeLocationId)
-        //////{
-        //////    AtlasLocations spaceTimeLocation = GetSpaceTimeLocationByID(spaceTimeLocationId);
-        //////    if (spaceTimeLocation.Accessable == true)
-        //////    {
-        //////        return true;
-        //////    }
-        //////    else
-        //////    {
-        //////        return false;
-        //////    }
-        //////}
-
         /// <summary>
         /// return the next available ID for a SpaceTimeLocation object
         /// </summary>
@@ -159,7 +139,7 @@ namespace TheAionProject
             //
             if (spaceTimeLocation == null)
             {
-                string feedbackMessage = $"The Space-Time Location ID {ID} does not exist in the current Universe.";
+                string feedbackMessage = $"The Atlas Location {ID} does not exist in the current Universe.";
                 throw new ArgumentException(ID.ToString(), feedbackMessage);
             }
 

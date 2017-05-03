@@ -21,6 +21,7 @@ namespace TheAionProject
         private string _generalContents; // Look around
         private bool _accessable;
         private int _experiencePoints;
+        private int _level = 0;
 
         #endregion
 
@@ -73,6 +74,12 @@ namespace TheAionProject
         {
             get { return _experiencePoints; }
             set { _experiencePoints = value; }
+        }
+
+        public int CharacterLevel
+        {
+            get { return _level; }
+            set { _level = value; }
         }
            
         #endregion

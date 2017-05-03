@@ -10,8 +10,11 @@ namespace TheAionProject
     {
         public abstract int Id { get; set; }
         public abstract string Name { get; set; }
+        public abstract string _npcName { get; set; }
+        public abstract int Power { get; set; }
         public abstract string Description { get; set; }
         public abstract int AtlasLocationId { get; set; }
+        
         
         
     

@@ -58,7 +58,7 @@ namespace TheAionProject
                 "Ornate metal lines the open archway and inside; a glowing anvil and forge. \n" +
                 "seemingly placed delicately upon the forge; a huge tome. \n"+
                 "This place looks almost untouched...",
-                Accessable = false,
+                Accessable = true,
                 ExperiencePoints = 100
             },
 
@@ -69,7 +69,7 @@ namespace TheAionProject
                 UniversalDate = 7017,
                 UniversalLocation = "Somewhere in the Dark Wood",
                 Description = "The mine is cold and dank and smells of sulfur. Someone might be here.. \n",
-                              
+
                 GeneralContents = "A natural deposit of materials. \n" +
                               "You feel like you know your way around here. Why does this place feel familiar to you as well?",
                 Accessable = true,
@@ -78,52 +78,55 @@ namespace TheAionProject
 
             new AtlasLocations
             {
-                CommonName = "Dol Guldar",
+                CommonName = "Future City",
                 AtlasLocationID = 5,
                 UniversalDate = 100,
                 UniversalLocation = "Somewhere",
-                Description = "You've found Dol Guldar!",
-                GeneralContents = "The lost city of Dol Guldar! You've stumbled upon a rare sight and feel enlightened. \nYou gain experience.",
+                Description = "A city like you've never imagined.",
+                GeneralContents = "A city that bustles with activity and too many voices, you should get out of here. \nYou gain experience.",
                 Accessable = true,
-                ExperiencePoints = -100
-                
+                ExperiencePoints = 123
+
             },
              new AtlasLocations
             {
-                CommonName = "Khazad Dum",
+                CommonName = "Abandonded Valley",
                 AtlasLocationID = 6,
                 UniversalDate = 100,
-                UniversalLocation = "Somewhere",
-                Description = "You've found Khazad Dum!",
-                GeneralContents = "The lost city of Dol Guldar! You've stumbled upon a rare sight and feel enlightened. \nYou gain experience.",
+                UniversalLocation = "A cold and seemingly empty place.",
+                Description = "If you go down there, you might not get out.",
+                GeneralContents = "You struggle to see through the thick fog. Anything could be down there.. \nYou gain experience.",
                 Accessable = true,
-                ExperiencePoints = 500
+                ExperiencePoints = 511
 
             },
               new AtlasLocations
             {
-                CommonName = "Minas Morgul",
+                CommonName = "Damp Thicket",
                 AtlasLocationID = 7,
                 UniversalDate = 100,
-                UniversalLocation = "Somewhere",
-                Description = "You've found Minas Morgul!",
-                GeneralContents = "The lost city of Dol Guldar! You've stumbled upon a rare sight and feel enlightened. \nYou gain experience.",
-                Accessable = false,
-                ExperiencePoints = -100
+                UniversalLocation = "Somewhere off course",
+                Description = "Looks like you'd never want to come across any reason you might want to go in there.",
+                GeneralContents = "You don't want to go in, just want to know where it is. \nYou gain experience.",
+                Accessable = true,
+                ExperiencePoints = -94,
+                
 
             },
                new AtlasLocations
             {
-                CommonName = "Stronghold",
+                CommonName = "Old Iron Mill",
                 AtlasLocationID = 8,
                 UniversalDate = 100,
-                UniversalLocation = "Somewhere",
-                Description = "You've found the Stronghold!",
-                GeneralContents = "The lost city of Dol Guldar! You've stumbled upon a rare sight and feel enlightened. \nYou gain experience.",
-                Accessable = false,
+                UniversalLocation = "The Iron Mill",
+                Description = "An iron mill. You can see people still working it, regardless of the shape its in.",
+                GeneralContents = "Tons of iron laying around. You can definitely use this. \nYou gain experience.",
+                Accessable = true,
                 ExperiencePoints = 63
 
-            }
+            },
+           
         };
+        
     }
 }

@@ -9,18 +9,22 @@ namespace TheAionProject
     /// <summary>
     /// static class to hold all npc objects
     /// </summary>
-    public static partial class UniverseObjects
+    public static partial class UniverseObjects 
     {
         public static List<NPC> NPCs = new List<NPC>()
         {
             new Civilian
             {
                 Id = 1,
-                _npcName = "Toby Danger", // ALL NPC NAMES HAVE VERY OWN GET/SET 'NPCName'.
+                Name = "Toby Danger", // ALL NPC NAMES HAVE VERY OWN GET/SET 'NPCName'.
                 AtlasLocationsID = 2,
                 Description = "A skeleton that looks...alive? The sarco may have been his.",
-                isEnemy = false,
+                combatReady = false,
+                isDead = false,
+                hasQuest = false,
+                Power = 15,
                 Messages = new List<string>
+
                 {
                     "Sometimes dead..is better.",
                     "Why do you look so suprised? You're deader than I am.",
@@ -31,15 +35,20 @@ namespace TheAionProject
             new Civilian
             {
                 Id = 2,
-                _npcName = "Great Knight Haswell",
+                Name = "Great Knight Haswell",
                 AtlasLocationsID = 1,
                 damage = 14.7,
+                isDead = false,
                 Description = "He's standing there talking to himself..",
+                Power = 35,
+                hasQuest = true,
                 Messages = new List<string>
+                
                 {
-                    "I miss Space Ghost.",
-                    "Guide us. Teach us. Protect us. in your light we shall thrive, without it, we shall hunger",
-                    "I have no business with you."
+                    "Guide us. Teach us. Protect us. In your light we shall thrive, in your wisdom we are sheltered.",
+                    "The field is lost.",
+                    "The black one has fallen from the sky and the towers, in ruins, lie.",
+                    "The enemy is within, everywhere!"
                 }
                 
             },
@@ -47,14 +56,51 @@ namespace TheAionProject
             new Civilian
             {
                 Id = 3,
-                _npcName = "Space Ghost",
+                Name = "Space Ghost",
                 AtlasLocationsID = 4,
                 Description = "It's...Space Ghost! O_O",
+                isDead = false,
+                hasQuest = false,
+                Power = 150,
                  Messages = new List<string>
                 {
                     "Haswell gives me the creeps.",
                     "I need to find Zorak, is he with you?",
                     "I'm on my way around the world, coast to coast."
+                }
+            },
+
+            new Civilian
+            {
+                Id = 3,
+                Name = "The Neon Droid",
+                AtlasLocationsID = 8,
+                Description = "An obvious robot shaped like a female human. It sits close, seemingly trying to seduce me.",
+                isDead = false,
+                hasQuest = false,
+                Power = 250,
+                 Messages = new List<string>
+                {
+                    "*Sits closer*",
+                    "*lights up",
+                    "*brushes back invisible hair*",
+                    ""
+                }
+            },
+            new Civilian
+            {
+                Id = 3,
+                Name = "Lazer Hawk",
+                AtlasLocationsID = 6,
+                Description = "A Hawk with lazers. -_-",
+                isDead = false,
+                hasQuest = false,
+                Power = 70,
+                 Messages = new List<string>
+                {
+                    "Caw!",
+                    "Zap!",
+                    "*Glares*"
                 }
             }
         };

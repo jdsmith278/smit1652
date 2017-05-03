@@ -259,6 +259,7 @@ namespace TheAionProject
             //                        
             _gameTraveler.AtlasLocationsID = _gameConsoleView.DisplayGetNextAtlasLocation();
             _currentLocation = _gameWorld.getAtlasLocationById(_gameTraveler.AtlasLocationsID);
+          
 
             //
             // display the new space-time location info
@@ -266,6 +267,7 @@ namespace TheAionProject
             _gameConsoleView.DisplayCurrentLocationInfo();
         }
 
+       
         /// <summary>
         /// process the Look At action
         /// </summary>
@@ -394,12 +396,15 @@ namespace TheAionProject
             _gameTraveler.Age = traveler.Age;
             _gameTraveler.Faction = traveler.Faction;
             _gameTraveler.WeaponType = traveler.WeaponType;
+            _gameTraveler.Power = traveler.Power;
             
             _gameTraveler.AtlasLocationsID = 1;
 
             _gameTraveler.ExperiencePoints = 0;
+            _gameTraveler.Level = 1;
             _gameTraveler.Health = 100;
-            _gameTraveler.Lives = 3;
+            _gameTraveler.Lives = 1;
+            _gameTraveler.Power = 40;
         }
 
         /// <summary>
@@ -418,6 +423,7 @@ namespace TheAionProject
                 // update experience points for visiting locations
                 //
                 _gameTraveler.ExperiencePoints += _currentLocation.ExperiencePoints;
+                //_gameTraveler.ExperiencePoints += NPC.
             }
         }
 

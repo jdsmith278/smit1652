@@ -60,7 +60,7 @@ namespace TheAionProject
         public static string InitializeMissionGetTravelerName()
         {
             string messageBoxText =
-                "Enter your 5 digit Citizen ID, exile.\n";
+                "What is your name, Exile?\n";
 
             //"Please use the name you wish to be referred during your mission.";
 
@@ -72,7 +72,7 @@ namespace TheAionProject
             string messageBoxText =
                 /*$"Very good then, we will call you {gameTraveler.Name} on this mission.\n"*/
                 //" \n" +
-                "Enter your age.\n" +
+                "How many years have you been asleep?\n" +
                 " \n";
             //"Please use the standard Earth year as your reference.";
 
@@ -129,7 +129,7 @@ namespace TheAionProject
                //" listed below.\n" +
                " \n" +
                $"\tAlias: {gameTraveler.Name}\n" +
-               $"\tAge: {gameTraveler.Age}\n" +
+               $"\tRelative Age: {gameTraveler.Age}\n" +
                $"\tDiety: {gameTraveler.Faction}\n" +
                $"\tMastery: {gameTraveler.WeaponType}\n"
               /* "Press any key to begin."*/;
@@ -153,8 +153,12 @@ namespace TheAionProject
                 $"\t\t\t\t\t\t\tAge: {gameTraveler.Age}\n" +
                 $"\t\t\t\t\t\t\tDiety: {gameTraveler.Faction}\n" +
                 $"\t\t\t\t\t\t\tMastery: {gameTraveler.WeaponType}\n" +
-                $"\t\t\t\t\t\t\tCurrent Location: {currentLocation.CommonName} \n\n";
-                
+                $"\t\t\t\t\t\t\tCurrent Location: {currentLocation.CommonName} \n\n "+
+                $"\t\t\t\t\t\t\tCurrent Level: {gameTraveler.Level} \n\n" +
+                $"\t\t\t\t\t\t\tPower: {gameTraveler.Power} \n\n";
+
+
+
 
             return messageBoxText;
         }
@@ -278,6 +282,9 @@ namespace TheAionProject
             statusBoxText.Add($"Experience Points: {exile.ExperiencePoints}\n");
             statusBoxText.Add($"Health: {exile.Health}\n");
             statusBoxText.Add($"Lives: {exile.Lives}\n");
+            statusBoxText.Add($"Level: {exile.Level}\n");
+        
+            
 
             return statusBoxText;
         }
@@ -506,6 +513,8 @@ namespace TheAionProject
             //    return statusBoxText;
             //}
         }
+
+      
     }
 }
 

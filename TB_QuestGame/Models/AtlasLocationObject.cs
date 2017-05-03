@@ -8,12 +8,15 @@ namespace TheAionProject
 {
     class AtlasLocationObject : GameObject
     {
-        
-            public override int Id { get; set; }
-            public override string Name { get; set; }
-            public override string Description { get; set; }
-            public override int AtlasLocationId { get; set; }
-            public bool IsDeadly { get; set; }
-        
+
+        public override int Id { get; set; }
+        public override string Name { get; set; }
+        public override string _npcName { get; set; }
+
+        public override int Power { get; set; }
+        public override string Description { get; set; }
+        public override int AtlasLocationId { get; set; }
+        public bool IsDeadly { get; set; }
+
     }
 }

@@ -26,6 +26,8 @@ namespace TheAionProject
         private int _experiencePoints;
         private int _health;
         private int _lives;
+        private int _level;
+        private int _power;
         public Weapon _weapons;
         private List<int> _atlasLocationsVisited;
         private List<TravelerObject> _inventory;
@@ -58,6 +60,17 @@ namespace TheAionProject
             set { _weapons = value; }
         }
 
+        public int Level
+        {
+            get { return _level; }
+            set { _level = value; }
+        }
+
+        public int Power
+        {
+            get { return _power; }
+            set { _power = value; }
+        }
         public List<int> AtlasLocationsVisited
         {
             get { return _atlasLocationsVisited; }
@@ -73,7 +86,7 @@ namespace TheAionProject
         #endregion
 
         #region CONSTRUCTORS
-                
+
         #endregion
 
         #region METHODS
@@ -89,30 +102,30 @@ namespace TheAionProject
             }
         }
 
+        //public bool HasKilled()
+        //{
+        //    if ( == true)
+        //    {
+        //        ExperiencePoints += 1000;
+        //        return ExperiencePoints;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+
         public Exile()
         {
             _atlasLocationsVisited = new List<int>();
             _inventory = new List<TravelerObject>();
         }
 
-        public Exile(int name, FactionType race, int atlasLocationID) : base(name, race, atlasLocationID)
+        public Exile(string name, FactionType race, int atlasLocationID, int level, int power) : base(name, race, atlasLocationID, level, power)
         {
             _atlasLocationsVisited = new List<int>();
             _inventory = new List<TravelerObject>();
         }
-
-
-        //public Exile()
-        //{
-        //    _atlasLocationsVisited = new List<int>();
-        //}
-
-        //public Exile(int name, FactionType race, int atlasLocationID) : base(name, race, atlasLocationID) // should fix if improper page 12 referance guide sprint 2 did not contain 3 arguments
-        //{
-        //    _atlasLocationsVisited = new List<int>();
-        //}
-
-
         #endregion
     }
 }

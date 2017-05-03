@@ -26,9 +26,11 @@ namespace TheAionProject
 
         #region FIELDS
         public string _npcName;
-        protected int _name;
+        protected string _name;
         protected int _atlasLocationsID;
         protected int _age;
+        protected int _level;
+        protected int _power;
         protected FactionType _faction;
         protected string dietyDescript; // string req
         protected bool isName; // bool req
@@ -43,7 +45,7 @@ namespace TheAionProject
             get { return _npcName; }
             set { _npcName = value; }
         }
-        public int Name
+        public string Name
         {
             get { return _name; }
             set { _name = value; }
@@ -76,11 +78,14 @@ namespace TheAionProject
 
         }
 
-        public Character(int name, FactionType faction, int atlasLocationID) // should fix if improper page 12 referance guide sprint 2 did not contain 3 arguments
+        public Character(string name, FactionType faction, int atlasLocationID, int level, int power) // should fix if improper page 12 referance guide sprint 2 did not contain 3 arguments
         {
+           
             _name = name;
             _faction = faction;
             _atlasLocationsID = atlasLocationID;
+            _level = level;
+            _power = power;
             
         }
 

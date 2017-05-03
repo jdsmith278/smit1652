@@ -118,16 +118,16 @@ namespace TheAionProject
                 }
         };
 
-        //public static Menu ManageTraveler = new Menu()
-        //{
-        //    MenuName = "ManageTraveler",
-        //    MenuTitle = "Manage Traveler",
-        //    MenuChoices = new Dictionary<char, PlayerAction>()
-        //            {
-        //                PlayerAction.MissionSetup,
-        //                PlayerAction.TravelerInfo,
-        //                PlayerAction.Exit
-        //            }
-        //};
+        public static Menu BattelMenu = new Menu()
+        {
+            MenuName = "BattleMenu",
+            MenuTitle = "Battle Menu",
+            MenuChoices = new Dictionary<char, ExileAction>()
+                {
+                    { 'T', ExileAction.TalkTo},
+                    { 'q', ExileAction.ReturnToMainMenu }
+                }
+        };
+        
     }
 }
